@@ -1,0 +1,87 @@
+.dashboard-wrapper {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-wrapper h1 {
+  font-size: 3rem;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.dashboard-wrapper p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Button styles */
+.dashboard-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.15);
+}
+
+.dashboard-container button:hover {
+  background-color: #115293;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(25, 118, 210, 0.25);
+}
+
+/* Icon styling */
+.dashboard-container .icon {
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .dashboard-wrapper {
+    padding: 40px 10px;
+  }
+
+  .dashboard-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-wrapper p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .dashboard-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    max-width: 100%;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .dashboard-container button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .dashboard-container .icon {
+    font-size: 16px;
+  }
+}

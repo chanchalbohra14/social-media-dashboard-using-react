@@ -1,0 +1,94 @@
+/* Container styles */
+.todos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.todos-container h1 {
+  text-align: center;
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Loader center */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/* Table wrapper */
+.todo-table {
+  width: 100%;
+  background-color: #f3f8ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(25, 118, 210, 0.15);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Table styles */
+.todo-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header style */
+.todo-table thead tr {
+  background-color: #1976d2;
+  color: white;
+  user-select: none;
+}
+
+/* Table cells */
+.todo-table th,
+.todo-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 16px;
+}
+
+/* Zebra stripes for rows */
+.todo-table tbody tr:nth-child(even) {
+  background-color: #e8f0fe;
+}
+
+/* Hover effect on rows */
+.todo-table tbody tr:hover {
+  background-color: #bbdefb;
+  cursor: pointer;
+}
+
+/* Responsive: shrink font and allow wrapping on smaller screens */
+@media (max-width: 600px) {
+  .todo-table th,
+  .todo-table td {
+    font-size: 9px;
+    padding: 8px;
+  }
+
+  .todo-table table {
+    table-layout: fixed; /* Ensures columns scale proportionally */
+  }
+
+  .todo-table td:nth-child(2),  /* Title column */
+  .todo-table th:nth-child(2) {
+    width: 60%;
+  }
+
+  .todo-table td:nth-child(1),
+  .todo-table td:nth-child(3),
+  .todo-table th:nth-child(1),
+  .todo-table th:nth-child(3) {
+    width: 20%;
+  }
+}

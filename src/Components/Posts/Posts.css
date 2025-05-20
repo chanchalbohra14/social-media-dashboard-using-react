@@ -1,0 +1,98 @@
+.posts-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 24px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #333;
+  user-select: none;
+}
+
+.posts-card > div {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: default;
+  border: 1px solid #e3e8ff;
+}
+
+.posts-card > div:hover {
+  box-shadow: 0 12px 30px rgba(25, 118, 210, 0.3);
+  transform: translateY(-8px);
+  border-color: #1976d2;
+}
+
+.posts-card p {
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.posts-card p:nth-child(1) {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1565c0;
+}
+
+.posts-card p:nth-child(2) {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #0d263b;
+  margin-bottom: 8px;
+}
+
+.posts-card p:nth-child(3) {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #444d6e;
+  flex-grow: 1;
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .posts-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts-card {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    height: auto;
+    width: 100%;
+  }
+
+  .posts-card > div {
+    padding: 16px 20px;
+  }
+
+  .posts-card p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+}
